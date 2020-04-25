@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="list-container">
+    <HomeItemList v-for="home in homes" :key="home._id" :home="home" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import HomeItemList from './components/HomeItemList.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
+    HomeItemList
+  },
+  data() {
+    return {
+      homes: [
+        {
+          _id: '1',
+          name: 'Home 1',
+          imageUrl: './assets/home.jpg',
+          description:
+            'This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool'
+        }
+      ]
+    };
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.list-container {
+  display: flex;
+  flex-direction: column;
 }
 </style>
