@@ -40,6 +40,20 @@ export default {
           imageUrl: './assets/home.jpg',
           description:
             'This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool'
+        },
+        {
+          _id: '4',
+          name: 'Home 4',
+          imageUrl: './assets/home.jpg',
+          description:
+            'This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool'
+        },
+        {
+          _id: '5',
+          name: 'Home 5',
+          imageUrl: './assets/home.jpg',
+          description:
+            'This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool'
         }
       ]
     };
