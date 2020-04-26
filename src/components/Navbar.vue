@@ -7,20 +7,8 @@
       <font-awesome-icon :icon="['fab', 'vuejs']" />
     </a>
     <ul class="main-nav" :class="{ active: isOpen }">
-      <li>
-        <a href="#" class="nav-links">Home</a>
-      </li>
-      <li>
-        <a href="#" class="nav-links">Owners</a>
-      </li>
-      <li>
-        <a href="#" class="nav-links">Sign up</a>
-      </li>
-      <li>
-        <a href="#" class="nav-links">Sign in</a>
-      </li>
-      <li>
-        <a href="#" class="nav-links">Contact</a>
+      <li v-ripple="'#2196f3'" v-for="route in routes" :key="route.text">
+        <a href="route.link" class="nav-links">{{ route.text }}</a>
       </li>
     </ul>
   </nav>
@@ -30,7 +18,29 @@
 export default {
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      routes: [
+        {
+          text: 'Home',
+          link: '#'
+        },
+        {
+          text: 'Owners',
+          link: '#'
+        },
+        {
+          text: 'Sign up',
+          link: '#'
+        },
+        {
+          text: 'Sign in',
+          link: '#'
+        },
+        {
+          text: 'Contact',
+          link: '#'
+        }
+      ]
     };
   },
   methods: {
@@ -42,15 +52,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 .navbar {
   font-size: 18px;
-  background-color: green;
+  background-color: $main_color;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
   z-index: 1;
@@ -67,7 +80,6 @@ export default {
 .nav-links,
 .logo {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .main-nav li {
@@ -87,7 +99,6 @@ export default {
   top: 10px;
   right: 20px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.8);
   font-size: 24px;
 }
 
@@ -95,12 +106,12 @@ export default {
   display: block;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $mid_resolution) {
   .navbar {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 60px;
+    height: $navbar_height_mid;
     align-items: center;
   }
 
@@ -125,11 +136,6 @@ export default {
 
   .navbar-toggle {
     display: none;
-  }
-
-  .logo:hover,
-  .nav-links:hover {
-    color: rgba(255, 255, 255, 1);
   }
 }
 </style>
