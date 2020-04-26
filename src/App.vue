@@ -1,16 +1,21 @@
 <template>
-  <div id="app" class="list-container">
-    <HomeItemList v-for="home in homes" :key="home._id" :home="home" />
+  <div id="app">
+    <Navbar />
+    <div class="list-container">
+      <HomeItemList v-for="home in homes" :key="home._id" :home="home" />
+    </div>
   </div>
 </template>
 
 <script>
 import HomeItemList from './components/HomeItemList.vue';
+import Navbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
   components: {
-    HomeItemList
+    HomeItemList,
+    Navbar
   },
   data() {
     return {
@@ -45,7 +50,11 @@ export default {
 <style lang="scss">
 body {
   background-color: lightblue;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 .list-container {
   display: flex;
   flex-direction: column;
