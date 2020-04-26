@@ -5,12 +5,14 @@
     <div class="description">
       <p>{{ home.description }}</p>
     </div>
-    <button class="button edit-button" @click="clickEdit">
-      Edit
-    </button>
-    <button class="button remove-button" @click="clickRemove">
-      Remove
-    </button>
+    <div class="action-buttons">
+      <button class="button edit-button" @click="clickEdit">
+        Edit
+      </button>
+      <button class="button remove-button" @click="clickRemove">
+        Remove
+      </button>
+    </div>
   </div>
 </template>
 
@@ -66,9 +68,10 @@ export default {
   width: 95%;
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
+  background-color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .home-image {
@@ -88,8 +91,18 @@ export default {
     margin: 10px 0;
   }
   margin: 0;
-  padding-left: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
   @include ellipsis-multiline(18, 1.2, 4, 10);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
 }
 
 .button {
@@ -98,6 +111,8 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 15pt;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .edit-button {
@@ -107,4 +122,5 @@ export default {
 .remove-button {
   background-color: #ff5a5a;
 }
+
 </style>

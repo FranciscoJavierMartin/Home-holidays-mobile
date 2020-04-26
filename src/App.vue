@@ -21,6 +21,20 @@ export default {
           imageUrl: './assets/home.jpg',
           description:
             'This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool'
+        },
+        {
+          _id: '2',
+          name: 'Home 2',
+          imageUrl: './assets/home.jpg',
+          description:
+            'This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool'
+        },
+        {
+          _id: '3',
+          name: 'Home 3',
+          imageUrl: './assets/home.jpg',
+          description:
+            'This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool. This house count with two bedrooms, four bathrooms and garden. Kids can play in the swimming pool'
         }
       ]
     };
@@ -29,6 +43,9 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  background-color: lightblue;
+}
 .list-container {
   display: flex;
   flex-direction: column;
