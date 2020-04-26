@@ -53,6 +53,10 @@ export default {
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
+  transition: all 0.6s ease-out;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .main-nav {

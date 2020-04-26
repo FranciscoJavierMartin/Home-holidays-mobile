@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar class="padding-navbar" />
     <div class="list-container">
       <HomeItemList v-for="home in homes" :key="home._id" :home="home" />
     </div>
@@ -56,6 +56,7 @@ body {
 }
 
 .list-container {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
 }
