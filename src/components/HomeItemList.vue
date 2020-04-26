@@ -1,6 +1,14 @@
 <template>
   <div class="card">
-    <img src="../assets/home.jpg" alt="Home image" class="home-image" />
+    <div class="home-image">
+      <img
+        v-if="home.imageUrl"
+        :src="home.imageUrl"
+        alt="Home image"
+        @error="onImageError"
+      />
+      <img v-else src="@/assets/home.jpg" alt="Home image" />
+    </div>
     <h2 class="title">{{ home.name }}</h2>
     <div class="description">
       <p>{{ home.description }}</p>
@@ -33,6 +41,9 @@ export default {
     },
     clickRemove() {
       alert('Remove clicked');
+    },
+    onImageError() {
+      this.home.imageUrl = undefined;
     }
   }
 };
@@ -71,8 +82,9 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.home-image {
+.home-image img {
   width: 100%;
+  height: 250px;
 }
 
 .title {
