@@ -11,16 +11,16 @@
         <a href="#" class="nav-links">Home</a>
       </li>
       <li>
-        <a href="#" class="nav-links">Products</a>
+        <a href="#" class="nav-links">Owners</a>
       </li>
       <li>
-        <a href="#" class="nav-links">About Us</a>
+        <a href="#" class="nav-links">Sign up</a>
       </li>
       <li>
-        <a href="#" class="nav-links">Contact Us</a>
+        <a href="#" class="nav-links">Sign in</a>
       </li>
       <li>
-        <a href="#" class="nav-links">Blog</a>
+        <a href="#" class="nav-links">Contact</a>
       </li>
     </ul>
   </nav>
