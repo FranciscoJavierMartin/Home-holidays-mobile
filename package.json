@@ -1,5 +1,5 @@
 {
-  "name": "home-list",
+  "name": "home-holidays-mobile",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,6 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "homepage": "https://franciscojaviermartin.github.io/home-holidays-mobile/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
