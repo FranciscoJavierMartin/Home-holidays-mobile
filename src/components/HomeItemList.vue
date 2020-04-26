@@ -1,14 +1,14 @@
 <template>
   <div class="card">
-    <img
-      v-if="home.imageUrl"
-      :src="home.imageUrl"
-      alt="Home image"
-      @error="onImageError"
-      class="home-image"
-    />
-    <img v-else src="@/assets/home.jpg" alt="Home image" class="home-image" />
-
+    <div class="home-image">
+      <img
+        v-if="home.imageUrl"
+        :src="home.imageUrl"
+        alt="Home image"
+        @error="onImageError"
+      />
+      <img v-else src="@/assets/home.jpg" alt="Home image" />
+    </div>
     <h2 class="title">{{ home.name }}</h2>
     <div class="description">
       <p>{{ home.description }}</p>
@@ -153,7 +153,7 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   color: white;
-  background-color: #2196f3;
+  background-color: #2196f3 !important;
   box-shadow: 0 0 4px #999;
   outline: none;
 }

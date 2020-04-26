@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <Navbar class="padding-navbar" />
-    <HomeList :homes="homes" />
+    <!--<Navbar />
+    <HomeList :homes="this.homes" />-->
+    <Button />
   </div>
 </template>
 
 <script>
-import HomeList from './components/HomeList.vue';
-import Navbar from './components/Navbar.vue';
+//import HomeList from './components/HomeList.vue';
+//import Navbar from './components/Navbar.vue';
+import Button from './components/Button.vue';
 
 export default {
   name: 'App',
   components: {
-    HomeList,
-    Navbar
+    /*HomeList,
+    Navbar,*/
+    Button
   },
   data() {
     return {
@@ -62,8 +65,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/scss/variables.scss';
+
 body {
-  background-color: lightblue;
+  /*background-color: $color;*/
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
