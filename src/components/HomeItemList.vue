@@ -63,7 +63,6 @@ export default {
 }
 
 .card {
-  max-width: 500px;
   margin: 10px auto;
   width: 95%;
   display: flex;
@@ -76,7 +75,6 @@ export default {
 
 .home-image {
   width: 100%;
-  height: 250px;
 }
 
 .title {
@@ -123,4 +121,39 @@ export default {
   background-color: #ff5a5a;
 }
 
+@media (min-width: 600px) {
+  .description {
+    @include ellipsis-multiline(17, 1.2, 10, 10);
+  }
+  .action-buttons {
+    flex-direction: row;
+  }
+
+  .edit-button {
+    flex-grow: 1;
+  }
+
+  .remove-button {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 1000px;
+  }
+
+  .home-image {
+    height: 400px;
+  }
+
+  .action-buttons {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .button {
+    max-width: 200px;
+  }
+}
 </style>
