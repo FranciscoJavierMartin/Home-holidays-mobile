@@ -2,8 +2,6 @@
 
 I use a new project with mock data for simplify the work, sorry for the inconvenience. This page show a list of house for holiday rent.
 
-The page can be visited at https://franciscojaviermartin.github.io/Home-holidays-mobile/
-
 The full code is available at https://github.com/FranciscoJavierMartin/Home-holidays-mobile/
 
 Subjects to considerer:
