@@ -29,5 +29,5 @@ export default {
 
 @media screen and (min-width: $mid_resolution)
   .list-container
-    padding-top: $navbar_height_mid;
+    padding-top: $navbar_height_mid
 </style>

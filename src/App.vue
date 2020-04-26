@@ -63,13 +63,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="sass">
 @import './assets/scss/variables.scss';
 
-body {
-  background-color: $main_background_color;
-  margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+body
+  background-color: $main_background_color
+  margin: 0 auto
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 </style>

@@ -49,100 +49,85 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
 @import '../assets/scss/variables.scss';
 
-.card {
-  margin: 10px auto;
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+.card
+  margin: 10px auto
+  width: 95%
+  display: flex
+  flex-direction: column
+  background-color: white
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
-.home-image img {
+.home-image img
   width: 100%;
   height: 250px;
-}
 
-.title {
-  font-weight: bolder;
-  padding-left: 10px;
-  font-size: 22pt;
-  margin: 10px;
-}
+.title
+  font-weight: bolder
+  padding-left: 10px
+  font-size: 22pt
+  margin: 10px
 
-.description {
-  p {
-    margin: 10px 0;
-  }
-  margin: 0;
-  padding: 0 5%;
-  @include ellipsis-multiline(18, 1.2, 4, 10);
-}
+.description
+  p
+    margin: 10px 0
 
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  padding: 15px 10px;
-}
+  margin: 0
+  padding: 0 5%
+  @include ellipsis-multiline(18, 1.2, 4, 10)
 
-button {
-  border: none;
-  padding: 12px 18px;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: white;
-  box-shadow: 0 0 4px #999;
-  outline: none;
-  border-color: white;
-  padding: 10px 0;
-  font-size: 15pt;
-  border-radius: 10px;
-  margin: 5px;
-}
+.action-buttons
+  display: flex
+  flex-direction: column
+  padding: 15px 10px
 
-.edit-button {
-  background-color: #47ca47;
-}
+button
+  border: none
+  padding: 12px 18px
+  text-transform: uppercase
+  cursor: pointer
+  color: white
+  box-shadow: 0 0 4px #999
+  outline: none
+  border-color: white
+  padding: 10px 0
+  font-size: 15pt
+  border-radius: 10px
+  margin: 5px
 
-.remove-button {
-  background-color: #ff5a5a;
-}
+.edit-button
+  background-color: #47ca47
 
-@media (min-width: $mid_resolution) {
-  .description {
-    @include ellipsis-multiline(17, 1.2, 10, 10);
-  }
-  .action-buttons {
-    flex-direction: row;
-  }
+.remove-button
+  background-color: #ff5a5a
 
-  .edit-button {
-    flex-grow: 1;
-  }
 
-  .remove-button {
-    flex-grow: 1;
-  }
-}
+@media (min-width: $mid_resolution)
+  .description
+    @include ellipsis-multiline(17, 1.2, 10, 10)
 
-@media (min-width: $large_resolution) {
-  .card {
-    max-width: 1000px;
-  }
-  .home-image {
-    height: 400px;
-  }
+  .action-buttons
+    flex-direction: row
 
-  .action-buttons {
-    justify-content: flex-end;
-    flex-direction: row;
-  }
+  .edit-button
+    flex-grow: 1
 
-  button {
-    max-width: 200px;
-  }
-}
+  .remove-button
+    flex-grow: 1
+
+@media (min-width: $large_resolution)
+  .card
+    max-width: 1000px
+
+  .home-image
+    height: 400px
+
+  .action-buttons
+    justify-content: flex-end
+    flex-direction: row
+
+  button
+    max-width: 200px
 </style>

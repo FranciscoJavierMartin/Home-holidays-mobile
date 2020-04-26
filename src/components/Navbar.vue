@@ -51,91 +51,78 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/scss/variables.scss';
+<style lang="sass" scoped>
+@import '../assets/scss/variables.scss'
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  color: white;
-}
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+  color: white
 
-.navbar {
-  font-size: 18px;
-  background-color: $main_color;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 10px;
-  z-index: 1;
-  top: 0;
-  position: fixed;
-  width: 100%;
-}
+.navbar
+  font-size: 18px
+  background-color: $main_color
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  padding-bottom: 10px
+  z-index: 1
+  top: 0
+  position: fixed
+  width: 100%
 
-.main-nav {
-  list-style-type: none;
-  display: none;
-}
+.main-nav
+  list-style-type: none
+  display: none
 
 .nav-links,
-.logo {
-  text-decoration: none;
-}
+.logo
+  text-decoration: none
 
-.main-nav li {
-  text-align: center;
-  margin: 15px auto;
-}
+.main-nav li
+  text-align: center
+  margin: 15px auto
 
-.logo {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
+.logo
+  display: inline-block
+  font-size: 22px
+  margin-top: 10px
+  margin-left: 20px
 
-.navbar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-  font-size: 24px;
-}
+.navbar-toggle
+  position: absolute
+  top: 10px
+  right: 20px
+  cursor: pointer
+  font-size: 24px
 
-.active {
-  display: block;
-}
 
-@media screen and (min-width: $mid_resolution) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: $navbar_height_mid;
-    align-items: center;
-  }
+.active
+  display: block
 
-  .main-nav {
-    display: flex;
-    margin-right: 30px;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
 
-  .main-nav li {
-    margin: 0;
-  }
+@media screen and (min-width: $mid_resolution)
+  .navbar
+    display: flex
+    justify-content: space-between
+    padding-bottom: 0
+    height: $navbar_height_mid
+    align-items: center
 
-  .nav-links {
-    margin-left: 40px;
-  }
+  .main-nav
+    display: flex
+    margin-right: 30px
+    flex-direction: row
+    justify-content: flex-end
 
-  .logo {
-    margin-top: 0;
-  }
+  .main-nav li
+    margin: 0
 
-  .navbar-toggle {
-    display: none;
-  }
-}
+  .nav-links
+    margin-left: 40px
+
+  .logo
+    margin-top: 0
+
+  .navbar-toggle
+    display: none
 </style>
