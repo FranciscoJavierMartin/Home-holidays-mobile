@@ -1,23 +1,23 @@
 <template>
   <div class="card">
-    <div class="home-image">
-      <img
-        v-if="home.imageUrl"
-        :src="home.imageUrl"
-        alt="Home image"
-        @error="onImageError"
-      />
-      <img v-else src="@/assets/home.jpg" alt="Home image" />
-    </div>
+    <img
+      v-if="home.imageUrl"
+      :src="home.imageUrl"
+      alt="Home image"
+      @error="onImageError"
+      class="home-image"
+    />
+    <img v-else src="@/assets/home.jpg" alt="Home image" class="home-image" />
+
     <h2 class="title">{{ home.name }}</h2>
     <div class="description">
       <p>{{ home.description }}</p>
     </div>
     <div class="action-buttons">
-      <button class="button edit-button" @click="clickEdit">
+      <button class="button edit-button ripple" @click="clickEdit">
         Edit
       </button>
-      <button class="button remove-button" @click="clickRemove">
+      <button class="button remove-button ripple" @click="clickRemove">
         Remove
       </button>
     </div>
@@ -37,10 +37,10 @@ export default {
   },
   methods: {
     clickEdit() {
-      alert('Edit clicked');
+      console.log('Edit clicked');
     },
     clickRemove() {
-      alert('Remove clicked');
+      console.log('Remove clicked');
     },
     onImageError() {
       this.home.imageUrl = undefined;
@@ -131,7 +131,34 @@ export default {
   background-color: #ff5a5a;
 }
 
-@media (min-width: 600px) {
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+    center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+}
+
+@media (min-width: 768px) {
   .description {
     @include ellipsis-multiline(17, 1.2, 10, 10);
   }
@@ -148,11 +175,10 @@ export default {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
   .card {
-    width: 1000px;
+    max-width: 1000px;
   }
-
   .home-image {
     height: 400px;
   }

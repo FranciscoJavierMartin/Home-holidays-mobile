@@ -50,12 +50,10 @@ export default {
 
 .navbar {
   font-size: 18px;
-  background: transparent;
   background-color: green;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
-  transition: all 0.6s ease-out;
-  z-index: 99;
+  z-index: 1;
   top: 0;
   position: fixed;
   width: 100%;
