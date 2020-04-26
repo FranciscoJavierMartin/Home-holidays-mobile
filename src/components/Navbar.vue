@@ -50,10 +50,12 @@ export default {
 
 .navbar {
   font-size: 18px;
-  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  background: transparent;
+  background-color: green;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
   transition: all 0.6s ease-out;
+  z-index: 99;
   top: 0;
   position: fixed;
   width: 100%;
@@ -95,12 +97,12 @@ export default {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .navbar {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 70px;
+    height: 60px;
     align-items: center;
   }
 
